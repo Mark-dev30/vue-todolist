@@ -22,8 +22,9 @@
                         <div class="content-list  mt-5">
                             <div class="list ">
                                 <ul class="list-unstyled p-5">
-                                    <li class="list-item" v-for="(todo, index) in todoList" :class="(todo.done) ? 'text-through' : ''">
+                                    <li class="list-item mt-5 d-flex justify-content-between" v-for="(todo, index) in todoList" :class="(todo.done) ? 'text-through' : ''">
                                         <h2> {{ index + 1 }} - {{ todo.text }} </h2>
+                                        <button class=" btn btn-danger" @click="removeTodo(index)"><i class="fa-solid fa-xmark"></i></button>
                                     </li>
                                 </ul>
                             </div>
